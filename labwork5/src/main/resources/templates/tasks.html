@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Tasks</h2>
+<a href="/tasks/add">Add Task</a>
+<table>
+  <tr><th>Title</th><th>Status</th><th>Due Date</th></tr>
+  <tr th:each="task : ${tasks}">
+    <td th:text="${task.title}">Title</td>
+    <td th:text="${task.status}">Status</td>
+    <td th:text="${task.dueDate}">Due Date</td>
+  </tr>
+</table>
+</body>
+</html>
